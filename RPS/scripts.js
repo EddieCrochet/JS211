@@ -2,6 +2,6 @@
 
 const dropItem = document.getElementsByClassName("drpItem");
 
-const drpItemSelected = () => {
-    
+const drpItemSelected = (e) => {
+    let dropSelected = e.innerHTML;
 }
