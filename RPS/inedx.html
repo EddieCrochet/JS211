@@ -15,11 +15,20 @@
         <div class="dropdown">
             <button class="dropbtn">Dropdown</button>
             <div class="dropdown-content">
-                <div class="drpItem selectRock">Rock</div>
-                <div class="drpItem selectPaper">Paper</div>
-                <div class="drpItem selectScissors">Scissors</div>
+                <div onclick="drpItemSelected()" class="drpItem selectRock">Rock</div>
+                <div onclick="drpItemSelected()" class="drpItem selectPaper">Paper</div>
+                <div onclick="drpItemSelected()" class="drpItem selectScissors">Scissors</div>
             </div>
         </div>
+        <section>
+            <p>You have chosen </p>
+            <h1></h1>
+        </section>
+        <section>
+            <p>And I have chosen: </p>
+            <h1></h1>
+        </section>
     </main>
 </body>
+<script src="index.js"></script>
 </html>
