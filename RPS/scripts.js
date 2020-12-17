@@ -34,6 +34,24 @@ const determineWinner = () => {
         actionInGame.innerHTML = " is ";
         compHand.innerHTML = h2fg.innerHTML;
         result.innerHTML = "Well, I'll be damned, it's a tie";
+    } else if (h1fg.innerHTML == "Rock") {
+        if (h2fg.innerHTML == "Paper") {
+
+        } else if (h2fg.innerHTML == "Scissors") {
+
+        }
+    } else if (h1fg.innerHTML == "Paper") {
+        if (h2fg.innerHTML == "Rock") {
+
+        } else if (h2fg.innerHTML == "Scissors") {
+            
+        }
+    } else if (h1fg.innerHTML == "Scissors") {
+        if (h2fg.innerHTML == "Paper") {
+
+        } else if (h2fg.innerHTML == "Rock") {
+            
+        }
     }
 }
 
