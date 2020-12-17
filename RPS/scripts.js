@@ -29,28 +29,34 @@ const drpItemSelected = (e) => {
 
 //compare the two selections and determine winner
 const determineWinner = () => {
+    userHand.innerHTML = h1fg.innerHTML;
+    compHand.innerHTML = h2fg.innerHTML;
     if (h1fg.innerHTML == h2fg.innerHTML) {
-        userHand.innerHTML = h1fg.innerHTML;
         actionInGame.innerHTML = " is ";
-        compHand.innerHTML = h2fg.innerHTML;
-        result.innerHTML = "Well, I'll be damned, it's a tie";
+        result.innerHTML = " Well, I'll be damned, it's a tie";
     } else if (h1fg.innerHTML == "Rock") {
         if (h2fg.innerHTML == "Paper") {
-
+            actionInGame.innerHTML = " gets covered by ";
+            result.innerHTML = " I have defeated you...";
         } else if (h2fg.innerHTML == "Scissors") {
-
+            actionInGame.innerHTML = " crushes ";
+            result.innerHTML = " ... HOw...how have you defeaten me...?";
         }
     } else if (h1fg.innerHTML == "Paper") {
         if (h2fg.innerHTML == "Rock") {
-
+            actionInGame.innerHTML = " covers ";
+            result.innerHTML = " ...you...you did it.. beat.. me... :(";
         } else if (h2fg.innerHTML == "Scissors") {
-            
+            actionInGame.innerHTML = " gets sliced and diced by ";
+            result.innerHTML = " I AM GOD.";
         }
     } else if (h1fg.innerHTML == "Scissors") {
         if (h2fg.innerHTML == "Paper") {
-
+            actionInGame.innerHTML = " cuts all up on ";
+            result.innerHTML = " owie :( I dont wanna talk about it uwu.";
         } else if (h2fg.innerHTML == "Rock") {
-            
+            actionInGame.innerHTML = " becomes obliterated by my ";
+            result.innerHTML = " YOU CAN NOT OVER COME MY WRATH!";
         }
     }
 }
