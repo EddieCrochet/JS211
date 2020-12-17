@@ -22,7 +22,7 @@ const drpItemSelected = (e) => {
 
 //compare the two selections and determine winner
 const determineWinner = () => {
-
+    if 
 }
 
 //function for the computer to select an option for the game
