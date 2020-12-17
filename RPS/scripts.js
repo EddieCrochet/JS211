@@ -4,12 +4,16 @@ const p1fg = document.getElementById("p1fg");
 const p2fg = document.getElementById("p2fg");
 const h1fg = document.getElementById("h1fg");
 const h2fg = document.getElementById("h2fg");
+const userHand = document.getElementById("userHand");
+const actionInGame = document.getElementById("actionInGame");
+const compHand = document.getElementById("compHand");
+const result = document.getElementById("result");
 
 //this function assigns the user and comp to their choices
 const drpItemSelected = (e) => {
     p1fg.classList.remove("hide");
     setTimeout(function() {
-        h1fg.innerHTML= e.innerHTML;
+        h1fg.innerHTML= e.innerHTML.trim();
     }, 1000);
     setTimeout(function() {
         p2fg.classList.remove("hide");
@@ -17,12 +21,20 @@ const drpItemSelected = (e) => {
     setTimeout(function() {
         h2fg.innerHTML= compRPS();
     }, 3000);
-    determineWinner();
+    setTimeout(function() {
+        console.log(h1fg.innerHTML, h2fg.innerHTML)
+        determineWinner();
+    }, 4000);
 }
 
 //compare the two selections and determine winner
 const determineWinner = () => {
-    if 
+    if (h1fg.innerHTML == h2fg.innerHTML) {
+        userHand.innerHTML = h1fg.innerHTML;
+        actionInGame.innerHTML = " is ";
+        compHand.innerHTML = h2fg.innerHTML;
+        result.innerHTML = "Well, I'll be damned, it's a tie";
+    }
 }
 
 //function for the computer to select an option for the game
@@ -37,5 +49,5 @@ const compRPS = () => {
     } else if (ranNum == 2) {
         RPS = "Scissors";
     }
-    return RPS;
+    return RPS.trim();
 }
